@@ -3,6 +3,7 @@ package com.promineotech.jeep.controller;
 import static org.assertj.core.api.Assertions.assertThat;
 import java.util.List;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -27,7 +28,7 @@ import com.promineotech.jeep.entity.JeepModel;
     config = @SqlConfig(encoding = "utf-8"))
 
 class FetchJeepTest{
-
+  @Autowired
   private TestRestTemplate restTemplate;
   
   @LocalServerPort
